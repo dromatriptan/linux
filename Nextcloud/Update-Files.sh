@@ -6,7 +6,7 @@
 
 # get the absolute path of the executable
 SELF_PATH=$(cd -P -- "$(dirname -- "$0")" && pwd -P) && SELF_PATH=$SELF_PATH/$(basename -- "$0")
-SCRIPT_PATH=$(cd "$DIR" && cd "$(dirname -- "$SYM")" && pwd)
+SCRIPT_PATH=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
 
 # resolve symlinks
 while [[ -h $SELF_PATH ]]; do
